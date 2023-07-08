@@ -1,0 +1,11 @@
+{
+  "cSpell.words": ["gorm", "labstack"],
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "testdb",
+      "database": "${workspaceFolder:Chat}/data/test.db"
+    }
+  ]
+}
