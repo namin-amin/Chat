@@ -49,3 +49,7 @@
     port: 3000
     url: 0.0.0.0
 ```
+
+Login to *Url:port/ui/*
+
+Default config is <http://localhost:3000/ui/>
