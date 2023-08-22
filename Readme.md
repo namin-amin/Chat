@@ -34,3 +34,18 @@
     yarn build
     cd ..
     go build .
+
+## Configuration
+
+- supports configuring **PORT** and **URL**
+- can configure using commandline or config.yaml
+- commandline
+
+        ./Chat port=3000 url="0.0.0.0"
+
+- config.yaml
+
+```yml
+    port: 3000
+    url: 0.0.0.0
+```
