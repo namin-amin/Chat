@@ -12,3 +12,25 @@
 # ScreenShots
 
 ![screenshot1](docs/Demo.gif)
+
+## Running And Compiling
+
+### Requirements
+
+- [Go](https://go.dev/) SDK need to be installed
+- [NodeJs](https://nodejs.org/en)
+
+### Run
+
+    make run
+
+### Build Binary
+
+    make compile
+
+### Without make
+
+    cd ui3/
+    yarn build
+    cd ..
+    go build .

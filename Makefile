@@ -1,6 +1,6 @@
 #build and run dev
 dorun:
-	cd ui2/ && \
+	cd ui3/ && \
 	yarn build
 dodev:
 	go run .
