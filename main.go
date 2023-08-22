@@ -6,11 +6,12 @@ import (
 	"Chat/sse"
 	"embed"
 	"fmt"
+	"os"
+	"strings"
+
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"gopkg.in/yaml.v3"
-	"os"
-	"strings"
 )
 
 //go:embed all:build
@@ -27,7 +28,7 @@ func main() {
 	app := SetupNewServer()
 	//SetUp UI hosting
 	app.GET("/ui/*/**", echo.StaticDirectoryHandler(echo.MustSubFS(f, "build"), false))
-	app.Static("/", "static")
+	//app.Static("/", "static")
 	app.Logger.Fatal(app.Start(processedArgs.Url))
 }
 
