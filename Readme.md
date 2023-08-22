@@ -53,3 +53,10 @@
 Login to *Url:port/ui/*
 
 Default config is <http://localhost:3000/ui/>
+
+## 💀 Some Known Bugs
+
+- Double message sending on first login
+- UI unpolished
+- Security needs polishing
+- Many Bugs and HouseKeeping
