@@ -6,6 +6,7 @@ import (
 	"Chat/sse"
 	"embed"
 	"fmt"
+	"io/fs"
 	"os"
 	"strings"
 
@@ -27,8 +28,9 @@ func main() {
 	processedArgs := processConfiguration(args)
 	app := SetupNewServer()
 	//SetUp UI hosting
-	app.GET("/ui/*/**", echo.StaticDirectoryHandler(echo.MustSubFS(f, "build"), false))
-	//app.Static("/", "static")
+	app.GET("ui/*",echo.StaticFileHandler("build/index.html",f))
+	staticdir,_:= fs.Sub(f,"build/assets")
+	app.StaticFS("ui/assets",staticdir)
 	app.Logger.Fatal(app.Start(processedArgs.Url))
 }
 
